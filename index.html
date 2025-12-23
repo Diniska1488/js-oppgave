@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Js proj.</title> <script src=""></script> <style src></style>
+    <title>Js proj.</title>
+    <link rel="stylesheet" href="styles/col-gen.css">
+    <link rel="stylesheet" href="styles/pass-gen.css">
+    <script src="scripts/col-gen.js"></script> sc
+    <script src="scripts/pass-gen.js"></script>
 </head>
 <body>
     <h1>Three Js mechanics</h1>
     
     <section id="guess-game">
         <h2>Guess the number</h2>
-        <p>Datamaskinen valgte et tall</p>
-        <input type="gjett tallet">
+        <p>Pc chose a number</p>
+        <input type="number" id="guess-input">
     <button>Sjekke</button>
     <p class="result"></p>
     </section>
@@ -19,12 +23,14 @@
     <section id="color-generator">
         <h2>Color generator</h2>
         <p class="color-code"></p>
-        <button>Generere farge</button>
+        <button>Generate color</button>
         <div class="color-display"></div>
+        <div class="color-box"></div>
     </section>
 
         <section id="password-generator">
         <h2>Password generator</h2>
+        <p id="password-output"></p>
         <button>Generere passord</button>
         <p class="password-display"></p>
         </section>
