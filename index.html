@@ -6,20 +6,14 @@
     <title>Js proj.</title>
     <link rel="stylesheet" href="styles/col-gen.css">
     <link rel="stylesheet" href="styles/pass-gen.css">
-    <script src="scripts/col-gen.js"></script> sc
+    <link rel="stylesheet" href="styles/guess-game.css">
+    <script src="scripts/col-gen.js"></script>
     <script src="scripts/pass-gen.js"></script>
+    <script src="scripts/guess-game.js"></script>
 </head>
 <body>
     <h1>Three Js mechanics</h1>
     
-    <section id="guess-game">
-        <h2>Guess the number</h2>
-        <p>Pc chose a number</p>
-        <input type="number" id="guess-input">
-    <button>Sjekke</button>
-    <p class="result"></p>
-    </section>
-
     <section id="color-generator">
         <h2>Color generator</h2>
         <p class="color-code"></p>
@@ -28,12 +22,26 @@
         <div class="color-box"></div>
     </section>
 
-        <section id="password-generator">
+    <section id="password-generator">
         <h2>Password generator</h2>
-        <p id="password-output"></p>
-        <button>Generere passord</button>
+        <p id="password-output">-</p>
+        <button id="generate-password">Generate password</button>
         <p class="password-display"></p>
         </section>
     </section>
+
+    <section id="guess-game">
+        <h2>Guess the number</h2>
+        <p>Pc chose a number</p>
+        <p class="result"></p>
+        <input type="number" id="guess-input">
+    <button id="check-button">Check</button>
+    <button id="restart-button">Restart</button>
+    <p class="result"></p>
+    </section>
+
+    
+
+        
 </body>
 </html>
