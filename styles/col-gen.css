@@ -5,3 +5,14 @@
     margin-top: 20px;
     border: 1px solid #000;
 }
+.color-code {
+    font-family: monospace;
+    margin-top: 10px;
+    font-size: 25px;
+}
+.color-code {
+    cursor: pointer;
+}
+.color-code:hover {
+    text-decoration: underline;
+}

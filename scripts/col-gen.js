@@ -12,4 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         colorCode.textContent = randomColor;
     });
+    colorCode.addEventListener('click', function() {
+         navigator.clipboard.writeText(colorCode.textContent);
+         alert('Copied!');
+    });
 });

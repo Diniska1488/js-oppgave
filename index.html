@@ -13,43 +13,76 @@
     <script src="scripts/guess-game.js"></script>
 </head>
 <body>
-    <h1>Three Js mechanics</h1>
-<nav class="nav">
-    <ul>
-         <li><a href="#guess">Guess game </a></li>
-        <li><a href="#color">Color generator</a></li>
-        <li><a href="#password">Password generator</a></li>
-    </ul>
-</nav>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container">
+        <h1>Three JS Mechanics</h1>
+        <nav class="nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#guess-game">Guess game</a></li>
+            <li><a href="#color-generator">Color generator</a></li>
+            <li><a href="#password-generator">Password generator</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <section id="color-generator">
-        <h2>Color generator</h2>
-        <p class="color-code"></p>
-        <button>Generate color</button>
-        <div class="color-display"></div>
-        <div class="color-box"></div>
+<main id="main-content" class="container-main">
+
+    <section id="color-generator" class="mechanic">
+      <div class="section-grid">
+        <div class="section-main">
+          <h2>Color generator</h2>
+          <p class="color-code"></p>
+          <button>Generate color</button>
+          <div class="color-display"></div>
+          <div class="color-box"></div>
+        </div>
+        <aside class="section-info" aria-labelledby="color-info-title">
+          <h3 id="color-info-title">About the color generator</h3>
+          <p>Produces a random HEX color. Use it to quickly iterate on palettes or check color combinations.</p>
+          <p><strong>Tip:</strong> Click the button multiple times to find colors you like; copy the displayed code by clicking the code itself.</p>
+        </aside>
+      </div>
     </section>
 
-    <section id="password-generator">
-        <h2>Password generator</h2>
-        <p id="password-output">-</p>
-        <button id="generate-password">Generate password</button>
-        <p class="password-display"></p>
-        </section>
+    <section id="password-generator" class="mechanic">
+      <div class="section-grid">
+        <div class="section-main">
+          <h2>Password generator</h2>
+          <p id="password-output">-</p>
+          <button id="generate-password">Generate password</button>
+          <button onclick="navigator.clipboard.writeText(document.getElementById('password-output').textContent).then(() => alert('Copied!'))">Copy 
+          </button>
+          <p class="password-display"></p>
+        </div>
+        <aside class="section-info" aria-labelledby="password-info-title">
+          <h3 id="password-info-title">About the password generator</h3>
+          <p>Creates random passwords using letters, numbers, and symbols. Good for testing or creating quick sample credentials.</p>
+          <p><strong>Security note:</strong> For production use, prefer vetted libraries and allow users to choose length and complexity.</p>
+        </aside>
+      </div>
     </section>
 
-    <section id="guess-game">
-        <h2>Guess the number</h2>
-        <p>Pc chose a number</p>
-        <p class="result"></p>
-        <input type="number" id="guess-input">
-    <button id="check-button">Check</button>
-    <button id="restart-button">Restart</button>
-    <p class="result"></p>
+    <section id="guess-game" class="mechanic">
+      <div class="section-grid">
+        <div class="section-main">
+          <h2>Guess the number</h2>
+          <p>Choose a number between 1 and 10   </p>
+          <p class="result"></p>
+          <input type="number" id="guess-input" aria-label="Your guess">
+          <button id="check-button">Check</button>
+          <button id="restart-button">Restart</button>
+          <p class="result"></p>
+        </div>
+        <aside class="section-info" aria-labelledby="guess-info-title">
+          <h3 id="guess-info-title">About the game</h3>
+          <p>Try to guess the randomly chosen number between 1 and 10. Click <em>Check</em> to see if you're right.</p>
+          <p><strong>Tip:</strong> Use Restart to get a new number and keep trying.</p>
+        </aside>
+      </div>
     </section>
+</main>
 
-    
-
-        
 </body>
 </html>

@@ -24,5 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
         userGuess = null;
     });
 });
-
- 
+  document.getElementById('copy-button').addEventListener('click', function() {
+ async function copyTextToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('Text copied to clipboard');
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+}
+  });
