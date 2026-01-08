@@ -28,6 +28,24 @@
     </header>
 
 <main id="main-content" class="container-main">
+<section id="guess-game" class="mechanic">
+      <div class="section-grid">
+        <div class="section-main">
+          <h2>Guess the number</h2>
+          <p>Choose a number between 1 and 10   </p>
+          <p class="result"></p>
+          <input type="number" id="guess-input" aria-label="Your guess">
+          <button id="check-button">Check</button>
+          <button id="restart-button">Restart</button>
+          <p class="result"></p>
+        </div>
+        <aside class="section-info" aria-labelledby="guess-info-title">
+          <h3 id="guess-info-title">About the game</h3>
+          <p>Try to guess the randomly chosen number between 1 and 10. Click <em>Check</em> to see if you're right.</p>
+          <p><strong>Tip:</strong> Use Restart to get a new number and keep trying.</p>
+        </aside>
+      </div>
+    </section>
 
     <section id="color-generator" class="mechanic">
       <div class="section-grid">
@@ -59,29 +77,12 @@
         <aside class="section-info" aria-labelledby="password-info-title">
           <h3 id="password-info-title">About the password generator</h3>
           <p>Creates random passwords using letters, numbers, and symbols. Good for testing or creating quick sample credentials.</p>
-          <p><strong>Security note:</strong> For production use, prefer vetted libraries and allow users to choose length and complexity.</p>
+          
         </aside>
       </div>
     </section>
 
-    <section id="guess-game" class="mechanic">
-      <div class="section-grid">
-        <div class="section-main">
-          <h2>Guess the number</h2>
-          <p>Choose a number between 1 and 10   </p>
-          <p class="result"></p>
-          <input type="number" id="guess-input" aria-label="Your guess">
-          <button id="check-button">Check</button>
-          <button id="restart-button">Restart</button>
-          <p class="result"></p>
-        </div>
-        <aside class="section-info" aria-labelledby="guess-info-title">
-          <h3 id="guess-info-title">About the game</h3>
-          <p>Try to guess the randomly chosen number between 1 and 10. Click <em>Check</em> to see if you're right.</p>
-          <p><strong>Tip:</strong> Use Restart to get a new number and keep trying.</p>
-        </aside>
-      </div>
-    </section>
+    
 </main>
 
 </body>
