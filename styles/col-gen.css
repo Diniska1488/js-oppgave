@@ -7,8 +7,8 @@
 }
 .color-code {
     font-family: monospace;
-    margin-top: 10px;
     font-size: 25px;
+    font-weight: 300;
 }
 .color-code {
     cursor: pointer;
