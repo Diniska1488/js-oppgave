@@ -11,7 +11,11 @@ function generatePassword(length) {
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("generate-password").addEventListener("click", function() {
         let passwordOutput = generatePassword(8)
-        document.getElementById("password-output").textContent = passwordOutput;
-        document.getElementById("copy-password").style.display = "inline-block";
+        // document.getElementById("password-output").textContent = passwordOutput;
+        // document.getElementById("copy-password").style.display = "inline-block";
+        const passwordDisplay = document.getElementById("password-output");
+        console.log(passwordDisplay);
+        const copyPassword = document.getElementById("copy-password");
+        console.log(copyPassword);
     });
 });
