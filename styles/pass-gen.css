@@ -1,0 +1,8 @@
+#copy-password {
+    display: none;
+}
+#password-output {
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: 300;
+}

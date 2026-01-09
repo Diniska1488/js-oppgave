@@ -70,7 +70,7 @@
           <h2>Password generator</h2>
           <p id="password-output">-</p>
           <button id="generate-password">Generate password</button>
-          <button onclick="navigator.clipboard.writeText(document.getElementById('password-output').textContent).then(() => alert('Copied!'))">Copy 
+          <button id="copy-password" onclick="navigator.clipboard.writeText(document.getElementById('password-output').textContent).then(() => alert('Copied!'))">Copy 
           </button>
           <p class="password-display"></p>
         </div>
