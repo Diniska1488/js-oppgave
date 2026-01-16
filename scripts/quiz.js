@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     const submitButton = document.getElementById("submit-quiz");
-
+    const correctSound = new Audio('sounds/victory.mp3');
+        const wrongSound = new Audio('sounds/chestsmash.mp3');
+    let score = 0;
+    let correctAnswered = new Set();
 
      submitButton.addEventListener("click", function() {
         const selectedAnswer = document.querySelector('input[name="quiz-option"]:checked');
@@ -11,19 +14,114 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const userAnswer = selectedAnswer.value;
-        
-        const correctAnswer = "4"; //
+         const correctAnswer = "4"; //
 
-        if (userAnswer === correctAnswer) {
+        if (userAnswer === correctAnswer && !correctAnswered.has('q1')) {
+            correctSound.play();
             alert("Correct!");
-        } else {
+            correctAnswered.add('q1');
+            score++;
+        } else if (userAnswer !== correctAnswer) {
             alert("Incorrect. Try again.");
+            wrongSound.play();
         }
-        let score = 0;
-if (userAnswer === correctAnswer) {
-    score++;
-}
-document.getElementById("score").textContent = score;
+        document.getElementById("score").textContent = score;
+
+    });
+    const submitButton2 = document.getElementById("submit-quiz2");
+    submitButton2.addEventListener("click", function() {
+        const selectedAnswer = document.querySelector('input[name="quiz-option2"]:checked');
+        if (!selectedAnswer) {
+            alert("Please select an answer.");
+            return;
+        }
+
+        const userAnswer = selectedAnswer.value;
+        
+        const correctAnswer = "10%";
+
+        if (userAnswer === correctAnswer && !correctAnswered.has('q2')) {
+            correctSound.play();
+            alert("Correct!");
+            correctAnswered.add('q2');
+            score++;
+        } else if (userAnswer !== correctAnswer) {
+            alert("Incorrect. Try again.");
+            wrongSound.play();
+        }
+        document.getElementById("score").textContent = score;
+
+    });
+    const submitButton3 = document.getElementById("submit-quiz3");
+    submitButton3.addEventListener("click", function() {
+        const selectedAnswer = document.querySelector('input[name="quiz-option3"]:checked');
+        if (!selectedAnswer) {
+            alert("Please select an answer.");
+            return;
+        }
+
+        const userAnswer = selectedAnswer.value;
+        
+        const correctAnswer = "Guess game";
+
+        if (userAnswer === correctAnswer && !correctAnswered.has('q3')) {
+           correctSound.play();
+            alert("Correct!");
+            correctAnswered.add('q3');
+            score++;
+        } else if (userAnswer !== correctAnswer) {
+            alert("Incorrect. Try again.");
+            wrongSound.play();
+        }
+        document.getElementById("score").textContent = score;
+
+    });
+    const submitButton4 = document.getElementById("submit-quiz4");
+    submitButton4.addEventListener("click", function() {
+        const selectedAnswer = document.querySelector('input[name="quiz-option4"]:checked');
+        if (!selectedAnswer) {
+            alert("Please select an answer.");
+            return;
+        }
+
+        const userAnswer = selectedAnswer.value;
+        
+        const correctAnswer = "Random HEX color";
+
+        if (userAnswer === correctAnswer && !correctAnswered.has('q4')) {
+          correctSound.play();
+            alert("Correct!");
+            correctAnswered.add('q4');
+            score++;
+        } else if (userAnswer !== correctAnswer) {
+            alert("Incorrect. Try again.");
+            wrongSound.play();
+        }
+        document.getElementById("score").textContent = score;
+
+    });
+    const submitButton5 = document.getElementById("submit-quiz5");
+    submitButton5.addEventListener("click", function() {
+        const selectedAnswer = document.querySelector('input[name="quiz-option5"]:checked');
+        if (!selectedAnswer) {
+            alert("Please select an answer.");
+            return;
+        }
+
+        const userAnswer = selectedAnswer.value;
+        
+        const correctAnswer = "8";
+
+        if (userAnswer === correctAnswer && !correctAnswered.has('q5')) {
+              correctSound.play();
+            alert("Correct!");
+            correctAnswered.add('q5');
+            score++;
+        } else if (userAnswer !== correctAnswer) {
+            alert("Incorrect. Try again.");
+            wrongSound.play();
+        }
+        document.getElementById("score").textContent = score;
 
     });
 
