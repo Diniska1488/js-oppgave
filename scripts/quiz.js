@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             score++;
         } else if (userAnswer !== correctAnswer) {
             alert("Incorrect. Try again.");
-            wrongSound.play();
+            playSound("sounds/chestsmash.mp3");
         }
         document.getElementById("score").textContent = score;
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
             score++;
         } else if (userAnswer !== correctAnswer) {
             alert("Incorrect. Try again.");
-            wrongSound.play();
+           playSound("sounds/chestsmash.mp3");
         }
         document.getElementById("score").textContent = score;
 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
             score++;
         } else if (userAnswer !== correctAnswer) {
             alert("Incorrect. Try again.");
-            wrongSound.play();
+              playSound("sounds/chestsmash.mp3");
         }
         document.getElementById("score").textContent = score;
 
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
             score++;
         } else if (userAnswer !== correctAnswer) {
             alert("Incorrect. Try again.");
-            wrongSound.play();
+                playSound("sounds/chestsmash.mp3");
         }
         document.getElementById("score").textContent = score;
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
             score++;
         } else if (userAnswer !== correctAnswer) {
             alert("Incorrect. Try again.");
-            wrongSound.play();
+                playSound("sounds/chestsmash.mp3");
         }
         document.getElementById("score").textContent = score;
 
