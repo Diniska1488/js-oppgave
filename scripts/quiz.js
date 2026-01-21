@@ -1,8 +1,8 @@
+import { playSound } from "./sound.js";
+
 document.addEventListener("DOMContentLoaded", function() {
 
     const submitButton = document.getElementById("submit-quiz");
-    const correctSound = new Audio('sounds/victory.mp3');
-        const wrongSound = new Audio('sounds/chestsmash.mp3');
     let score = 0;
     let correctAnswered = new Set();
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
          const correctAnswer = "4"; //
 
         if (userAnswer === correctAnswer && !correctAnswered.has('q1')) {
-            correctSound.play();
+              playSound("sounds/victory.mp3");
             alert("Correct!");
             correctAnswered.add('q1');
             score++;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const correctAnswer = "10%";
 
         if (userAnswer === correctAnswer && !correctAnswered.has('q2')) {
-            correctSound.play();
+           playSound("sounds/victory.mp3");
             alert("Correct!");
             correctAnswered.add('q2');
             score++;
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const correctAnswer = "Guess game";
 
         if (userAnswer === correctAnswer && !correctAnswered.has('q3')) {
-           correctSound.play();
+           playSound("sounds/victory.mp3");
             alert("Correct!");
             correctAnswered.add('q3');
             score++;
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const correctAnswer = "Random HEX color";
 
         if (userAnswer === correctAnswer && !correctAnswered.has('q4')) {
-          correctSound.play();
+            playSound("sounds/victory.mp3");
             alert("Correct!");
             correctAnswered.add('q4');
             score++;
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const correctAnswer = "8";
 
         if (userAnswer === correctAnswer && !correctAnswered.has('q5')) {
-              correctSound.play();
+                playSound("sounds/victory.mp3");
             alert("Correct!");
             correctAnswered.add('q5');
             score++;
